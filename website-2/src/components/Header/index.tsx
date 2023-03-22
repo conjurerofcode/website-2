@@ -30,14 +30,14 @@ const Header = () => {
       variants={container}
       initial="hidden"
       animate="show"
-      className="w-full h-[10vh] p-1  flex flex-row "
+      className="w-full h-[10vh] min-h-[100px] p-1  flex flex-row "
     >
       <MotionPath
         stroke={70}
         d={"M 0,30 L 225,30 Q 250,30 250,0"}
         duration={0.65}
         style={
-          "absolute  top-0 left-0   w-min-half-400 h-[10vh] stroke-accent-blue -z-10"
+          "absolute  top-0 left-0   w-min-half-400 h-[10vh] min-h-[100px] stroke-accent-blue -z-10"
         }
       />
 
@@ -52,10 +52,10 @@ const Header = () => {
         className=" flex flex-row w-2/3   justify-end sm:justify-start"
         variants={item}
       >
-        <div className="m-2 relative">
+        <div className="m-2 mx-5 relative">
           <HeaderLink to={"/"} title={"Home"} />
         </div>
-        <div className="m-2 relative">
+        <div className="m-2 mx-5 relative">
           <HeaderLink to={"/portfolio"} title={"Portfolio"} />
         </div>
       </motion.div>

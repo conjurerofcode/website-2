@@ -8,6 +8,7 @@ module.exports = {
         persian: "#1B998B",
         moss: "#345511",
         "accent-blue": "#2B50AA",
+        silver: "#A5A299",
       },
       spacing: {
         "min-full-1000": "min(1000px, 100%)",

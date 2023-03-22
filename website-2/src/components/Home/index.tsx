@@ -40,7 +40,7 @@ const Home = () => {
       variants={container}
       initial="hidden"
       animate="show"
-      className=" w-full  min-w-screen h-[85vh]  flex flex-col sm:flex-row  justify-start items-center p-5"
+      className=" w-full  min-w-screen h-[85vh]  flex flex-col sm:flex-row  justify-start items-center p-5 "
     >
       <motion.div variants={img} className="w-min-full-600 h-[80%] ">
         <BlurImage src={selfie} base64={selfie64} />
@@ -55,15 +55,16 @@ const Home = () => {
               initial={{ rotate: 0, scale: 1 }}
               animate={{
                 scale: [1, 1.25, 1.25, 1],
-                rotate: [0, 20, -20, 0],
+                rotate: [0, -20, 20, 0],
+                color: ["#000000", "#FDE74C", "#FDE74C"],
               }}
-              transition={{ delay: 1.3, duration: 0.5 }}
+              transition={{ delay: 1.2, duration: 0.8 }}
               layout="position"
-              className="inline-block text-[#D64933] font-bold "
+              className="inline-block "
             >
-              <p className="inline">Hey</p>
+              Hey
             </motion.div>
-            , I'm Michael
+            , I'm Michael.
           </h1>
         </motion.div>
         <motion.div className="flex flex-col sm:flex-row ">

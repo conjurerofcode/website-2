@@ -38,7 +38,7 @@ const Icon = ({ src, link }: { src: string; link: string }) => {
     <a
       href={link}
       target="_blank"
-      className="sm:h-[5vh] h-[8vh] sm:w-[5vh] w-[8vh]  mx-2 transform duration-300 hover:scale-125 "
+      className="sm:h-[5vh] h-[8vh] sm:w-[5vh] w-[8vh] min-h-[50px] min-w-[50px] max-h-[75px] max-w-[75px]  mx-2 transform duration-300 hover:scale-125 "
       style={{
         backgroundImage: `url(${src})`,
         backgroundSize: "contain",

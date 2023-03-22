@@ -15,7 +15,7 @@ const HeaderLink = ({ to, title }: { to: string; title: string }) => {
         <MotionPath
           stroke={40}
           d={"M 0,25 L 250,25"}
-          style={`absolute  w-full h-[3vh]  stroke-accent-blue -z-10  `}
+          style={`absolute  w-full h-[3vh] min-h-[30px]  stroke-accent-blue -z-10  `}
         />
       )}
       <Link to={to}>{title}</Link>

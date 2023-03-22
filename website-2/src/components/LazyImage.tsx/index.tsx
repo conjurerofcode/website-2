@@ -19,7 +19,7 @@ function BlurImage({
 }: {
   src: string;
   base64: string;
-  fit: "fill" | "contain" | "cover" | "none" | "scale-down";
+  fit?: "fill" | "contain" | "cover" | "none" | "scale-down";
 }) {
   const [isLoaded, setIsLoaded] = useState(false);
 

@@ -3,14 +3,9 @@
 @tailwind utilities;
 
 body {
-  @apply bg-[#A5A299] p-0 m-0 font-quicksand overflow-x-hidden;
+  @apply bg-silver p-0 m-0 font-quicksand overflow-x-hidden;
 }
-/*body {
-  background-image: url("https://www.transparenttextures.com/patterns/argyle.png");
-   "https://www.transparenttextures.com/patterns/45-degree-fabric-light.png"
 
-  background-repeat: "repeat";
-} */
 @keyframes shake {
   0% {
     background-position: 0 0;
