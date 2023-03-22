@@ -13,10 +13,9 @@ const HeaderLink = ({ to, title }: { to: string; title: string }) => {
     >
       {isPath && (
         <MotionPath
-          view={"50 25 125 50"}
           stroke={40}
-          d={"M 50,50 L 250,50"}
-          style={`absolute   w-full h-[3vh]  stroke-[#086375] -z-10  `}
+          d={"M 0,25 L 250,25"}
+          style={`absolute  w-full h-[3vh]  stroke-accent-blue -z-10  `}
         />
       )}
       <Link to={to}>{title}</Link>

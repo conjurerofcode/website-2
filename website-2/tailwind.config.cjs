@@ -7,6 +7,7 @@ module.exports = {
         bone: "#DDDBCB",
         persian: "#1B998B",
         moss: "#345511",
+        "accent-blue": "#2B50AA",
       },
       spacing: {
         "min-full-1000": "min(1000px, 100%)",
@@ -27,6 +28,10 @@ module.exports = {
       },
       fontFamily: {
         quicksand: ["Quicksand", "sans-serif"],
+      },
+      backgroundImage: {
+        "gradient-radial":
+          "radial-gradient(circle, rgba(165,162,153,0.5) 0%, rgba(165,162,153, 1) 25%), url('https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png')",
       },
     },
   },

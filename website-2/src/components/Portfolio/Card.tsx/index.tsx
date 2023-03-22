@@ -4,7 +4,7 @@ import MotionPath from "../../MotionPath";
 const Card = ({ delay }: { delay: number }) => {
   return (
     <motion.div className="relative w-min-full-600 h-min-full-200 m-0 pl-5 overflow-hidden">
-      <MotionPath
+      {/* <MotionPath
         view={"255 90 200 200"}
         stroke={20}
         d={
@@ -12,7 +12,7 @@ const Card = ({ delay }: { delay: number }) => {
         }
         style={"absolute left-0 top-0  w-full h-[15vh] stroke-[#086375] "}
         delay={delay}
-      />
+      /> */}
       <h1 className={"text-clamp-lg"}>Title</h1>
     </motion.div>
   );

@@ -6,12 +6,14 @@ const MotionPath = ({
   stroke,
   view,
   delay,
+  duration,
 }: {
   style: string;
   d: string;
   stroke: number;
-  view: string;
+  view?: string;
   delay: number;
+  duration: number;
 }) => {
   return (
     <div className={`${style}`}>
@@ -20,7 +22,7 @@ const MotionPath = ({
           initial={{ pathLength: 0 }}
           animate={{ pathLength: 1 }}
           transition={{
-            duration: 0.5,
+            duration: duration,
             ease: "easeInOut",
             delay: delay,
           }}
@@ -33,5 +35,5 @@ const MotionPath = ({
     </div>
   );
 };
-MotionPath.defaultProps = { delay: 0 };
+MotionPath.defaultProps = { delay: 0, duration: 0.5 };
 export default MotionPath;

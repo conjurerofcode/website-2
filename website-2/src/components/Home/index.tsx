@@ -40,45 +40,40 @@ const Home = () => {
       variants={container}
       initial="hidden"
       animate="show"
-      className="h-full w-full  min-w-screen min-h-[80vh] flex flex-col sm:flex-row  justify-start items-start p-5 sm:m-10"
+      className=" w-full  min-w-screen h-[85vh]  flex flex-col sm:flex-row  justify-start items-center p-5"
     >
-      <motion.div variants={img} className="w-min-full-600 h-2/3 sm:ml-5">
+      <motion.div variants={img} className="w-min-full-600 h-[80%] ">
         <BlurImage src={selfie} base64={selfie64} />
       </motion.div>
       <motion.div
         variants={text}
-        className="w-full sm:w-1/2 h-full  sm:mx-5 pt-10 sm:mt-10 text-clamp-md"
+        className="w-full sm:w-1/2 h-[90%]   sm:mx-5  text-clamp-md flex flex-col justify-center"
       >
         <motion.div>
           <h1 className="text-clamp-lg">
-            <p className="inline text-[#B80C09]">Hey</p>, I'm Michael
+            <motion.div
+              initial={{ rotate: 0, scale: 1 }}
+              animate={{
+                scale: [1, 1.25, 1.25, 1],
+                rotate: [0, 20, -20, 0],
+              }}
+              transition={{ delay: 1.3, duration: 0.5 }}
+              layout="position"
+              className="inline-block text-[#D64933] font-bold "
+            >
+              <p className="inline">Hey</p>
+            </motion.div>
+            , I'm Michael
           </h1>
         </motion.div>
         <motion.div className="flex flex-col sm:flex-row ">
-          <p className="m-0 px-8 sm:p-0 mr-5">
+          <p className="mx-2">
             <br></br>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis
-            cursus in hac habitasse platea dictumst. Tortor posuere ac ut
-            consequat semper viverra nam libero justo. Ipsum nunc aliquet
-            bibendum enim facilisis gravida neque. Tellus pellentesque eu
-            tincidunt tortor aliquam nulla facilisi cras. Pellentesque pulvinar
-            pellentesque habitant morbi tristique senectus et netus et.
-            Adipiscing commodo elit at imperdiet.
-          </p>
-          <p className="m-0 px-8 sm:p-0 ">
-            <br></br>
-            Quis enim lobortis scelerisque fermentum dui faucibus in. Fringilla
-            ut morbi tincidunt augue. Cras fermentum odio eu feugiat. Dui ut
-            ornare lectus sit amet est placerat in egestas. Dignissim convallis
-            aenean et tortor at. Nibh venenatis cras sed felis eget. Vitae proin
-            sagittis nisl rhoncus mattis rhoncus urna neque viverra. Cursus
-            mattis molestie a iaculis at. Netus et malesuada fames ac turpis
-            egestas sed tempus urna. Condimentum lacinia quis vel eros donec ac
-            odio tempor. Faucibus nisl tincidunt eget nullam. Vulputate mi sit
-            amet mauris commodo quis imperdiet massa tincidunt. Suspendisse in
-            est ante in nibh mauris. Sagittis purus sit amet volutpat consequat
-            mauris nunc.
+            I'm a software developer, technology enthusiast, and avid bookworm.
+            Other than spending time coding, I enjoy writing (check out my
+            substack below), and spending time outdoors. Above all, I am
+            passionate about creating - building apps, writing stories, and
+            forming connections.
           </p>
         </motion.div>
       </motion.div>
@@ -90,3 +85,5 @@ const Home = () => {
 
 const selfie64 = import.meta.env.VITE_SELFIE_64;
 export default Home;
+
+// container className="h-full w-full  min-w-screen min-h-[80vh] flex flex-col sm:flex-row  justify-start items-start p-5"
