@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  @apply bg-[#ADB993] p-0 m-0 font-quicksand overflow-x-hidden;
+}
+body {
+  background-image: url("https://www.transparenttextures.com/patterns/connected.png");
+
+  background-repeat: "repeat";
+}
+@keyframes shake {
+  0% {
+    background-position: 0 0;
+  }
+  25% {
+    background-position: -50px -50px;
+  }
+  50% {
+    background-position: 0 0;
+  }
+  75% {
+    background-position: 50px 50px;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
