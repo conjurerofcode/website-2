@@ -8,13 +8,14 @@ type Props = {
   image: ReactNode;
   info: ReactNode;
   title: ReactNode;
+  index?: number;
 };
 
-const Card = ({ image, info, card, title }: Props) => {
+const Card = ({ image, info, card, title, index }: Props) => {
   const [isHovered, setIsHovered] = useState(false);
   const container = {
-    rest: {},
-    hover: {
+    rest: { },
+    hover: {  
       transition: {
         delayChildren: 0.1,
         staggerChildren: 0.5,
@@ -22,9 +23,12 @@ const Card = ({ image, info, card, title }: Props) => {
     },
   };
   const item = {
-    rest: { opacity: 0, scaleX: 0 },
-    hover: { opacity: 1, scaleX: 1 },
+    rest: { opacity: 0, scaleY: 0, translateY: -10 },
+    hover: { opacity: 1, scaleY: 1, translateY: 0 },
   };
+  const text = { 
+   
+  }
   return (
     <CardContext.Provider value={{ card }}>
       <motion.div
@@ -34,13 +38,25 @@ const Card = ({ image, info, card, title }: Props) => {
         variants={container}
         onMouseEnter={() => setIsHovered((prev: boolean) => true)}
         onMouseLeave={() => setIsHovered((prev: boolean) => false)}
-        className="relative w-min-full-400 h-min-half-400 border-black border-2 rounded-lg flex flex-col item-center justify-center "
+        className="w-full h-[30vh]  min-h-[200px]  flex flex-row justify-evenly"
       >
-        <h1 className="text-clamp-md bg-accent-blue text-white pl-3">
+        <motion.div className="flex flex-col sm:flex-1 relative items-center   ">
+
+        <motion.h1  className="w-1/3  min-w-[200px] text-clamp-md text-end sm:mr-10  ">
           {title}
-        </h1>
-        {image}
-        {isHovered && <motion.div variants={item}>{info}</motion.div>}
+        </motion.h1>
+          <motion.div className="absolute sm:right-10 top-0 h-full w-[2px] bg-sunny" ></motion.div>
+        <div className="h-[40vh] w-[40vh] min-w-[200px] min-h-[200px] bg-white rounded-lg">{image}</div>
+
+        </motion.div>
+        
+
+        <motion.div className="relative sm:flex-1  h-full  flex  items-center justify-center text-left">
+          <div className="h-2/3 w-2/3 flex items-start justify-center " >
+          {info}
+          </div>
+        </motion.div>
+        
       </motion.div>
     </CardContext.Provider>
   );

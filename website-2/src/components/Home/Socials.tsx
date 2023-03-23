@@ -12,7 +12,7 @@ const Socials = () => {
       initial={{ translateY: 10, opacity: 0 }}
       animate={{ translateY: 0, opacity: 1 }}
       transition={{ delay: 0.75 }}
-      className="sm:absolute w-min-half-400  sm:bottom-[5%] sm:left-[40%] self-center pt-5 sm:pt-0 bg-slate flex flex-row items-center justify-center"
+      className="absolute w-min-half-400 bottom-[10%] sm:bottom-[5%] sm:left-[40%]   flex flex-row items-center justify-center"
     >
       {icons.map(({ icon, url }) => {
         return <Icon src={icon} link={url} />;

@@ -8,28 +8,38 @@ import CardTitle from "./Card.tsx/CardTitle";
 import CardDescription from "./Card.tsx/CardDescription";
 import CardLink from "./Card.tsx/CardLink";
 import CardKeywords from "./Card.tsx/CardKeywords";
+import { CardType } from "../../types";
 
 const Portfolio = () => {
   const exCard = CardItems[0];
   // const cards = [1, 2, 3, 4];
   // const rows = Math.ceil(cards.length / 2);
   return (
-    <motion.div className="w-full h-full min-w-screen min-h-[80vh] flex items-center justify-center">
-      <Card
-        card={exCard}
-        image={<CardImage />}
-        title={<CardTitle />}
-        info={
-          <CardInfo>
-            <CardDescription />
-            <CardKeywords />
-            <CardLink />
-          </CardInfo>
-        }
-      />
+    <motion.div className="w-full h-full min-w-screen min-h-[85vh] flex flex-col items-center justify-center">
+      {cards}
+      
     </motion.div>
   );
 };
+const cards = CardItems.map((card: CardType, index: number) => {
+  return(
+  <motion.div className="h-[40vh] min-h-[400px]  w-full flex flex-row items-center" >
+  <Card
+    card={card}
+    index={index}
+    image={<CardImage />}
+    title={<CardTitle />}
+    info={
+      <CardInfo>
+        <CardDescription />
+        <CardKeywords />
+        <CardLink />
+      </CardInfo>
+    }
+  />
+  </motion.div>
+  )
+})
 
 export default Portfolio;
 

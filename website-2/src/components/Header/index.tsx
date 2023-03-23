@@ -30,26 +30,26 @@ const Header = () => {
       variants={container}
       initial="hidden"
       animate="show"
-      className="w-full h-[10vh] min-h-[100px] p-1  flex flex-row "
+      className="w-full h-[10vh] min-h-[100px] sm:p-1  flex flex-col sm:flex-row "
     >
       <MotionPath
         stroke={70}
-        d={"M 0,30 L 225,30 Q 250,30 250,0"}
+        d={"M 0,20 L 225,20 Q 250,20 250,0"}
         duration={0.65}
         style={
-          "absolute  top-0 left-0   w-min-half-400 h-[10vh] min-h-[100px] stroke-accent-blue -z-10"
+          "absolute  top-0 left-0   w-min-full-400 h-[10vh] min-h-[100px] stroke-navy -z-10"
         }
       />
 
       <motion.div
-        className=" w-min-full-400 flex flex-row  items-start justify-start pl-[1vw]"
+        className="w-min-full-400 flex flex-row items-center justify-start sm:items-start sm:justify-start sm:pl-[1vw]"
         variants={item}
       >
-        <h1 className="text-clamp-lg text-white z-20">Michael Moore</h1>
+        <h1 className="text-clamp-lg text-white z-20 pl-5">Michael Moore</h1>
       </motion.div>
 
       <motion.div
-        className=" flex flex-row w-2/3   justify-end sm:justify-start"
+        className="fixed border-t-2 border-navy sm:border-t-0 bottom-0 sm:relative bg-bone sm:bg-transparent flex flex-row w-full justify-center"
         variants={item}
       >
         <div className="m-2 mx-5 relative">
@@ -57,6 +57,16 @@ const Header = () => {
         </div>
         <div className="m-2 mx-5 relative">
           <HeaderLink to={"/portfolio"} title={"Portfolio"} />
+        </div>
+        <div className="m-2 mx-5 relative">
+          <HeaderLink to={"/email"} title={"Contact"} />
+        </div>
+        <div className="m-2 h-1/2  absolute right-5 px-3 py-1 border-2 border-black rounded-lg hidden sm:visible sm:block">
+        <motion.div
+      className={`duration-300  text-clamp-md w-min-half-200 `}
+    >
+      <a className="mt-5" href="/">Resume</a>
+    </motion.div>
         </div>
       </motion.div>
     </motion.div>

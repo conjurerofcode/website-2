@@ -1,7 +1,7 @@
 import { createContext, useContext } from "react";
-import { Card } from "../../../types";
+import { CardType } from "../../../types";
 
-const CardContext = createContext<{ card: Card } | null>(null);
+const CardContext = createContext<{ card: CardType } | null>(null);
 
 export function useCardContext() {
   const context = useContext(CardContext);

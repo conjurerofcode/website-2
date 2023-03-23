@@ -4,11 +4,18 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        bone: "#DDDBCB",
+
         persian: "#1B998B",
         moss: "#345511",
         "accent-blue": "#2B50AA",
         silver: "#A5A299",
+
+        navy: "#1e4481",
+        sunny: "#e2a846",
+        cheetoh: "#f7623c",
+        seafoam: "#74a09d",
+        abyss: "#201e1e",
+        bone: "#dfdaca"
       },
       spacing: {
         "min-full-1000": "min(1000px, 100%)",

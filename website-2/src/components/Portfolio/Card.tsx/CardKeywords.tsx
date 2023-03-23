@@ -31,7 +31,7 @@ const CardKeywords = () => {
       // whileHover="show"
       // animate="hidden"
       // variants={container}
-      className="absolute -bottom-5 left-0 flex flex-row "
+      className=" flex flex-row absolute bottom-0  w-2/3 justify-around"
     >
       {card.keywords.map((keyword: string, idx: number) => {
         return <motion.div key={idx}>{keyword}</motion.div>;
