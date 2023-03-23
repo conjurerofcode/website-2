@@ -1,17 +1,17 @@
 import { motion } from "framer-motion";
-import MotionPath from "../../MotionPath";
-import { ReactNode } from "react";
+import { ReactNode, useState } from "react";
 import CardContext from "./CardContext";
 import { CardType } from "../../../types";
-import CardImage from "./CardImage";
 
 type Props = {
   card: CardType;
   image: ReactNode;
   info: ReactNode;
+  title: ReactNode;
 };
 
-const Card = ({ image, info, card }: Props) => {
+const Card = ({ image, info, card, title }: Props) => {
+  const [isHovered, setIsHovered] = useState(false);
   const container = {
     rest: {},
     hover: {
@@ -22,15 +22,26 @@ const Card = ({ image, info, card }: Props) => {
     },
   };
   const item = {
-    rest: { scale: 1 },
-    hover: { scale: 2 },
+    rest: { opacity: 0, scaleX: 0 },
+    hover: { opacity: 1, scaleX: 1 },
   };
   return (
     <CardContext.Provider value={{ card }}>
-      <div>
+      <motion.div
+        initial="rest"
+        whileHover="hover"
+        animate="rest"
+        variants={container}
+        onMouseEnter={() => setIsHovered((prev: boolean) => true)}
+        onMouseLeave={() => setIsHovered((prev: boolean) => false)}
+        className="relative w-min-full-400 h-min-half-400 border-black border-2 rounded-lg flex flex-col item-center justify-center "
+      >
+        <h1 className="text-clamp-md bg-accent-blue text-white pl-3">
+          {title}
+        </h1>
         {image}
-        {info}
-      </div>
+        {isHovered && <motion.div variants={item}>{info}</motion.div>}
+      </motion.div>
     </CardContext.Provider>
   );
 };

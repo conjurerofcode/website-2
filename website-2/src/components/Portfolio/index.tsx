@@ -14,13 +14,13 @@ const Portfolio = () => {
   // const cards = [1, 2, 3, 4];
   // const rows = Math.ceil(cards.length / 2);
   return (
-    <motion.div className="w-full h-full min-w-screen min-h-[80vh] flex items-center ">
+    <motion.div className="w-full h-full min-w-screen min-h-[80vh] flex items-center justify-center">
       <Card
         card={exCard}
         image={<CardImage />}
+        title={<CardTitle />}
         info={
           <CardInfo>
-            <CardTitle />
             <CardDescription />
             <CardKeywords />
             <CardLink />

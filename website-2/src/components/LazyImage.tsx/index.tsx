@@ -14,7 +14,6 @@ const preloadImageWithPromise = (src: string) => {
 function BlurImage({
   src,
   base64,
-
   fit,
 }: {
   src: string;
@@ -32,7 +31,7 @@ function BlurImage({
   }, []);
   const currentSrc = isLoaded ? src : base64;
   return (
-    <div className={` h-full w-full overflow-hidden `}>
+    <div className={` h-full w-full overflow-hidden rounded-b-lg`}>
       <img
         className="h-full w-full     transform"
         loading="lazy"

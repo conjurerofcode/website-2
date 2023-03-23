@@ -1,17 +1,9 @@
 import malaria from "../src/assets/CardImages/malaria1.png";
 import humanNews from "../src/assets/CardImages/human-news.png";
-import wave from "../src/assets/CardImages/wave.png";
+import wave from "../src/assets/CardImages/wave.jpg";
 import { CardType } from "./types";
-// title: string;
-//     keywords: string[];
-//     link: string;
-//     description: string;
-//     image: {
-//         src: string;
-//         base64: string;
-//     };
 
-export const CardItems = [
+export const CardItems: CardType[] = [
   {
     title: "Malaria Detection",
     keywords: [
@@ -46,8 +38,8 @@ export const CardItems = [
     description:
       "This is an example of a short, one to two sentence description of this project. ",
     image: {
-      src: humanNews,
-      base64: import.meta.env.VITE_HUMAN_64,
+      src: wave,
+      base64: import.meta.env.VITE_WAVE_64,
     },
   },
 ];
