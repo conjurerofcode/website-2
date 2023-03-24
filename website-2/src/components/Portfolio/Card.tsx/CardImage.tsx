@@ -7,7 +7,11 @@ const CardImage = () => {
   const { card } = useCardContext();
   return (
     <div className="w-full h-full bg-white rounded-lg">
-      <BlurImage src={wave} base64={card.image.base64} fit={"contain"} />
+      <BlurImage
+        src={card.image.src}
+        base64={card.image.base64}
+        fit={"contain"}
+      />
     </div>
   );
 };

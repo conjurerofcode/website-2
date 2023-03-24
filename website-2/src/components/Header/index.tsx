@@ -49,7 +49,7 @@ const Header = () => {
       </motion.div>
 
       <motion.div
-        className="fixed border-t-2 border-navy sm:border-t-0 bottom-0 sm:relative bg-bone sm:bg-transparent flex flex-row w-full justify-center"
+        className="fixed border-t-2 border-navy z-20 sm:border-t-0 bottom-0 sm:relative bg-bone sm:bg-transparent flex flex-row w-full justify-center"
         variants={item}
       >
         <div className="m-2 mx-5 relative">
@@ -59,14 +59,18 @@ const Header = () => {
           <HeaderLink to={"/portfolio"} title={"Portfolio"} />
         </div>
         <div className="m-2 mx-5 relative">
-          <HeaderLink to={"/email"} title={"Contact"} />
+          <motion.div className={`duration-300  text-clamp-md w-min-half-200 `}>
+            <a className="mt-5" href="mailto: miromoore@protonmail.com">
+              Contact
+            </a>
+          </motion.div>
         </div>
         <div className="m-2 h-1/2  absolute right-5 px-3 py-1 border-2 border-black rounded-lg hidden sm:visible sm:block">
-        <motion.div
-      className={`duration-300  text-clamp-md w-min-half-200 `}
-    >
-      <a className="mt-5" href="/">Resume</a>
-    </motion.div>
+          <motion.div className={`duration-300  text-clamp-md w-min-half-200 `}>
+            <a className="mt-5 h-full w-full" href="/">
+              Resume
+            </a>
+          </motion.div>
         </div>
       </motion.div>
     </motion.div>

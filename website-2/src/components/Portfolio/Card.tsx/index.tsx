@@ -62,12 +62,12 @@ const Card = ({ image, info, card, title, index, keywords }: Props) => {
           </motion.div>
 
           <motion.div
-            className="absolute h-[65%] w-[95%] top-10 p-2 items-center text-center bg-sunny rounded-lg text-clamp-md"
+            className="absolute h-[65%] w-[95%] top-[15%] px-2 pt-2 items-center text-center backdrop-blur-lg bg-sunny/75 rounded-lg text-clamp-md"
             variants={description}
           >
             {info}
           </motion.div>
-          <div className="absolute bottom-0 rounded-b-lg w-full h-[4vh] backdrop-blur-lg  text-white text-clamp-sm flex items-center">
+          <div className="absolute -bottom-1 rounded-b-lg w-full h-[4vh]  bg-navy   text-white  text-clamp-sm flex items-center">
             {keywords}
           </div>
         </motion.div>

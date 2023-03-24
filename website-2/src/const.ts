@@ -1,6 +1,7 @@
-import malaria from "../src/assets/CardImages/malaria1.png";
-import humanNews from "../src/assets/CardImages/human-news.png";
+import malaria from "../src/assets/CardImages/CNN.png";
+import human from "../src/assets/CardImages/human-news.png";
 import wave from "../src/assets/CardImages/wave.jpg";
+import lightning from "../src/assets/CardImages/lightning.png";
 import { CardType } from "./types";
 
 export const CardItems: CardType[] = [
@@ -12,7 +13,7 @@ export const CardItems: CardType[] = [
       "Using Python and Convolutional Neural Networks, I trained a model to detect blood cells which were parasitized with Malaria.",
     image: {
       src: malaria,
-      base64: import.meta.env.VITE_WAVE_64,
+      base64: import.meta.env.VITE_MALARIA_64,
     },
   },
   {
@@ -22,8 +23,19 @@ export const CardItems: CardType[] = [
     description:
       "A satirical news agency I built using Typescript, React, Vite, & Tailwind which connects to OpenAI's API.",
     image: {
-      src: humanNews,
+      src: human,
       base64: import.meta.env.VITE_WAVE_64,
+    },
+  },
+  {
+    title: "Lightning Sessions",
+    keywords: ["Chrome Extension", "Javascript", "HTML", "& CSS"],
+    link: "https://chrome.google.com/webstore/detail/lightning-sessions/gedmhgdcipdhocgbhcgjnabfhmjpffad?hl=en&authuser=0",
+    description:
+      "A hotkey-based session manager that enables you to manage sessions and bookmarks, without touching your mouse.",
+    image: {
+      src: lightning,
+      base64: import.meta.env.VITE_LIGHTNING_64,
     },
   },
   {
@@ -38,3 +50,5 @@ export const CardItems: CardType[] = [
     },
   },
 ];
+//
+//

@@ -15,7 +15,7 @@ const Portfolio = () => {
   const rows = Math.ceil(cards.length / 2);
   return (
     <motion.div
-      className={`w-full h-full min-w-screen  min-h-[85vh] grid grid-cols-2 grid-rows-${rows} place-items-center `}
+      className={`w-full h-full min-w-screen  min-h-[85vh] grid grid-cols-1 sm:grid-cols-2 grid-rows-auto place-items-center `}
     >
       {cards}
     </motion.div>
