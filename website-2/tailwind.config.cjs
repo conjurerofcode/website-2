@@ -4,7 +4,6 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-
         persian: "#1B998B",
         moss: "#345511",
         "accent-blue": "#2B50AA",
@@ -15,7 +14,7 @@ module.exports = {
         cheetoh: "#f7623c",
         seafoam: "#74a09d",
         abyss: "#201e1e",
-        bone: "#dfdaca"
+        bone: "#dfdaca",
       },
       spacing: {
         "min-full-1000": "min(1000px, 100%)",
@@ -40,6 +39,9 @@ module.exports = {
       backgroundImage: {
         "gradient-radial":
           "radial-gradient(circle, rgba(165,162,153,0.5) 0%, rgba(165,162,153, 1) 25%), url('https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png')",
+      },
+      dropShadow: {
+        "test-shadow": "drop-shadow(4px 3px 0px #000);",
       },
     },
   },

@@ -31,11 +31,9 @@ const CardKeywords = () => {
       // whileHover="show"
       // animate="hidden"
       // variants={container}
-      className=" flex flex-row absolute bottom-0  w-2/3 justify-around"
+      className="h-1/2 flex flex-row w-full justify-center items-center text-center"
     >
-      {card.keywords.map((keyword: string, idx: number) => {
-        return <motion.div key={idx}>{keyword}</motion.div>;
-      })}
+      {card.keywords.join(", ")}
     </motion.div>
   );
 };

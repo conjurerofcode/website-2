@@ -31,7 +31,7 @@ function BlurImage({
   }, []);
   const currentSrc = isLoaded ? src : base64;
   return (
-    <div className={` h-full w-full overflow-hidden rounded-b-lg`}>
+    <div className={` h-full w-full overflow-hidden rounded-lg`}>
       <img
         className="h-full w-full     transform"
         loading="lazy"

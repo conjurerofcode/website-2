@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import MotionPath from "../MotionPath";
+
 import Card from "./Card.tsx";
 import { CardItems } from "../../const";
 import CardImage from "./Card.tsx/CardImage";
@@ -11,35 +12,47 @@ import CardKeywords from "./Card.tsx/CardKeywords";
 import { CardType } from "../../types";
 
 const Portfolio = () => {
-  const exCard = CardItems[0];
-  // const cards = [1, 2, 3, 4];
-  // const rows = Math.ceil(cards.length / 2);
+  const rows = Math.ceil(cards.length / 2);
   return (
-    <motion.div className="w-full h-full min-w-screen min-h-[85vh] flex flex-col items-center justify-center">
+    <motion.div
+      className={`w-full h-full min-w-screen  min-h-[85vh] grid grid-cols-2 grid-rows-${rows} place-items-center `}
+    >
       {cards}
-      
     </motion.div>
   );
 };
 const cards = CardItems.map((card: CardType, index: number) => {
-  return(
-  <motion.div className="h-[40vh] min-h-[400px]  w-full flex flex-row items-center" >
-  <Card
-    card={card}
-    index={index}
-    image={<CardImage />}
-    title={<CardTitle />}
-    info={
-      <CardInfo>
-        <CardDescription />
-        <CardKeywords />
-        <CardLink />
-      </CardInfo>
-    }
-  />
-  </motion.div>
-  )
-})
+  return (
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={{
+        hidden: { translateY: "-100px", scaleY: 0 },
+        visible: {
+          translateY: 0,
+          scaleY: 1,
+        },
+      }}
+      className="h-[40vh] min-h-[400px] items-center"
+    >
+      <Card
+        card={card}
+        index={index}
+        image={<CardImage />}
+        title={<CardTitle />}
+        keywords={<CardKeywords />}
+        info={
+          <CardInfo>
+            <CardDescription />
+
+            <CardLink />
+          </CardInfo>
+        }
+      />
+    </motion.div>
+  );
+});
 
 export default Portfolio;
 
