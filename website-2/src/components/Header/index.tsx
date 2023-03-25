@@ -42,7 +42,7 @@ const Header = () => {
       />
 
       <motion.div
-        className="w-min-full-400 flex flex-row items-center justify-start sm:items-start sm:justify-start sm:pl-[1vw]"
+        className="w-min-full-400 flex flex-row items-center justify-start sm:items-start sm:justify-start pt-2 pl-[5vw] sm:pl-[1vw] sm:pt-0"
         variants={item}
       >
         <h1 className="text-clamp-lg text-white z-20 ">Michael Moore</h1>

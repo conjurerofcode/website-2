@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 body {
-  @apply bg-bone text-abyss p-0 m-0 font-quicksand overflow-x-hidden;
+  @apply bg-bone text-abyss p-0 m-0 font-noto overflow-x-hidden;
 }
-body{
+body {
   background-image: url("https://www.transparenttextures.com/patterns/dimension.png");
   background-repeat: repeat;
 }

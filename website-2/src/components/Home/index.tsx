@@ -9,7 +9,7 @@ const Home = () => {
     show: {
       opacity: 1,
       transition: {
-        delayChildren: 0.5,
+        delayChildren: 0,
         staggerChildren: 0.5,
       },
     },
@@ -35,6 +35,7 @@ const Home = () => {
       },
     },
   };
+
   return (
     <motion.div
       variants={container}
@@ -61,7 +62,7 @@ const Home = () => {
                 // scale: [1, 1.25, 1],
                 rotate: [0, -20, 0],
               }}
-              transition={{ delay: 1.2, duration: 0.5 }}
+              transition={{ delay: 1, duration: 0.5 }}
               layout="position"
               className="inline-block "
             >

@@ -30,6 +30,7 @@ module.exports = {
       },
       fontFamily: {
         quicksand: ["Quicksand", "sans-serif"],
+        noto: ["Noto Sans", "sans-serif"],
       },
     },
   },

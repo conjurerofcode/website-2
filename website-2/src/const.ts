@@ -6,6 +6,17 @@ import { CardType } from "./types";
 
 export const CardItems: CardType[] = [
   {
+    title: "Human News",
+    keywords: ["Typescript", "React", "Generative AI", "& Vercel"],
+    link: "https://human-news.vercel.app/",
+    description:
+      "A satirical news agency I built using Typescript, React, Vite, & Tailwind which connects to OpenAI's API.",
+    image: {
+      src: human,
+      base64: import.meta.env.VITE_WAVE_64,
+    },
+  },
+  {
     title: "Malaria Detection",
     keywords: ["Python", "Conv. Neural Networks", "& Tensorflow"],
     link: "/",
@@ -14,17 +25,6 @@ export const CardItems: CardType[] = [
     image: {
       src: malaria,
       base64: import.meta.env.VITE_MALARIA_64,
-    },
-  },
-  {
-    title: "Human News",
-    keywords: ["Typescript", "React", "OpenAI", "& Vercel"],
-    link: "https://human-news.vercel.app/",
-    description:
-      "A satirical news agency I built using Typescript, React, Vite, & Tailwind which connects to OpenAI's API.",
-    image: {
-      src: human,
-      base64: import.meta.env.VITE_WAVE_64,
     },
   },
   {
