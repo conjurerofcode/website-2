@@ -42,7 +42,10 @@ const Home = () => {
       animate="show"
       className=" w-full  min-w-screen h-[85vh]  flex flex-col sm:flex-row  justify-start items-center px-5 "
     >
-      <motion.div variants={img} className="w-min-full-600 p-10 hidden sm:visible sm:block sm:p-0 h-[80%] ">
+      <motion.div
+        variants={img}
+        className="w-min-full-600 p-10 hidden sm:visible sm:block sm:p-0 h-[80%] "
+      >
         <BlurImage src={selfie} base64={selfie64} />
       </motion.div>
       <motion.div
@@ -52,13 +55,13 @@ const Home = () => {
         <motion.div>
           <h1 className="text-clamp-lg">
             <motion.div
-              initial={{ rotate: 0, scale: 1 }}
+              initial={{ rotate: 0 }}
               animate={{
-                scale: [1, 1.25, 1.25, 1],
-                rotate: [0, -20, 20, 0],
-                color: ["#000000", "#f7623c", "#f7623c"],
+                // fontWeight: ["normal", "bold", "normal"],
+                // scale: [1, 1.25, 1],
+                rotate: [0, -20, 0],
               }}
-              transition={{ delay: 1.2, duration: 0.8 }}
+              transition={{ delay: 1.2, duration: 0.5 }}
               layout="position"
               className="inline-block "
             >

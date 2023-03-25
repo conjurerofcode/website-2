@@ -34,7 +34,7 @@ const cards = CardItems.map((card: CardType, index: number) => {
           scaleY: 1,
         },
       }}
-      className="h-[40vh] min-h-[400px] items-center"
+      className="h-[40vh] min-h-[400px] "
     >
       <Card
         card={card}

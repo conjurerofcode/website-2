@@ -34,10 +34,10 @@ const Header = () => {
     >
       <MotionPath
         stroke={70}
-        d={"M 0,20 L 225,20 Q 250,20 250,0"}
+        d={"M 0,30 L 225,30 Q 250,30 250,0"}
         duration={0.65}
         style={
-          "absolute  top-0 left-0   w-min-full-400 h-[10vh] min-h-[100px] stroke-navy -z-10"
+          "absolute  top-0 left-0   w-min-full-400 h-[10vh] min-h-[100px] stroke-seafoam -z-10"
         }
       />
 
@@ -45,7 +45,7 @@ const Header = () => {
         className="w-min-full-400 flex flex-row items-center justify-start sm:items-start sm:justify-start sm:pl-[1vw]"
         variants={item}
       >
-        <h1 className="text-clamp-lg text-white z-20 pl-5">Michael Moore</h1>
+        <h1 className="text-clamp-lg text-white z-20 ">Michael Moore</h1>
       </motion.div>
 
       <motion.div
